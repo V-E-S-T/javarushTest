@@ -7,23 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c62353b3-1b48-47b6-9784-e42ddcd1faa6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_3_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/BookManager_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/BookManager_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/8d726446-0e95-4fac-b141-daf085f5ecee.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/8d726446-0e95-4fac-b141-daf085f5ecee.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_3_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_3_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_3_RELEASE.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BookManager.iml" afterPath="$PROJECT_DIR$/BookManager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/controller/BookController.java" afterPath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/controller/BookController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/dao/BookDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/dao/BookDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/dao/BookDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/dao/BookDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/service/BookService.java" afterPath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/service/BookService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/service/BookServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/manager/bookmanager/service/BookServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/books.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/books.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/database/test.sql" afterPath="$PROJECT_DIR$/src/resources/database/test.sql" />
     </list>
     <ignored path="BookManger.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -221,7 +209,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="744" />
@@ -884,12 +872,20 @@
       <workItem from="1518452019232" duration="2773000" />
       <workItem from="1518504943901" duration="9455000" />
       <workItem from="1518588234316" duration="8081000" />
-      <workItem from="1518695517304" duration="7854000" />
+      <workItem from="1518695517304" duration="8115000" />
     </task>
+    <task id="LOCAL-00001" summary="trying with pagination">
+      <created>1518705619482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518705619482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235469000" />
+    <option name="totallyTimeSpent" value="235730000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,8 +897,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -954,6 +949,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="trying with pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying with pagination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
