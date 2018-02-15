@@ -1,8 +1,10 @@
 package com.manager.bookmanager.dao;
 
 import com.manager.bookmanager.model.Book;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -10,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class BookDaoImpl implements BookDao {
+public class BookDaoImpl implements BookDao{
     private static final Logger logger = LoggerFactory.getLogger(BookDaoImpl.class);
 
     private SessionFactory sessionFactory;
@@ -61,9 +63,12 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     @SuppressWarnings("unchecked")
-    public List<Book> listBooks() {
+    public List<Book> listBooks(int page) {
         Session session = this.sessionFactory.getCurrentSession();
-        List<Book> bookList = session.createQuery("from Book").list();
+        Criteria criteria = session.createCriteria(Book.class);
+        criteria.setFirstResult((page - 1) * 10);
+        criteria.setMaxResults(10);
+        List<Book> bookList = (List<Book>)criteria.list();
         session.cancelQuery();
 
         for(Book book: bookList){
@@ -74,9 +79,20 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
+    public Long totalPageCount() {
+        Session session = this.sessionFactory.getCurrentSession();
+        Criteria criteriaCount = session.createCriteria(Book.class);
+        criteriaCount.setProjection(Projections.rowCount());
+
+        return (Long)criteriaCount.uniqueResult();
+    }
+
+    @Override
     public void updateStatus(int id) {
         Session session = this.sessionFactory.getCurrentSession();
+
        session.createQuery(("update Book set readAlready = '1' where id = :idParam")).setParameter("idParam", id).executeUpdate();
 
     }
+
 }

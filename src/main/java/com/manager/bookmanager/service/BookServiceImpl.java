@@ -41,8 +41,14 @@ public class BookServiceImpl implements BookService {
 
     @Override
     @Transactional
-    public List<Book> listBooks() {
-        return this.bookDao.listBooks();
+    public List<Book> listBooks(int page) {
+        return this.bookDao.listBooks(page);
+    }
+
+    @Override
+    @Transactional
+    public Long totalPageCount() {
+        return this.bookDao.totalPageCount();
     }
 
     @Override

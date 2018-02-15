@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class BookController {
@@ -23,9 +20,10 @@ public class BookController {
     }
 
         @RequestMapping(value = "books", method = RequestMethod.GET)
-        public String listBooks(Model model){
+        public String listBooks(Model model, @RequestParam(defaultValue = "0") int page){
         model.addAttribute("book", new Book());
-        model.addAttribute("listBooks", this.bookService.listBooks());
+        model.addAttribute("listBooks", this.bookService.listBooks(page));
+        model.addAttribute("totalPageCount", this.bookService.totalPageCount());
 
         return "books";
     }
@@ -41,7 +39,6 @@ public class BookController {
     @RequestMapping(value = "/books/edit", method = RequestMethod.POST)    //страницы
     public String editCurrentBook(@ModelAttribute("book") Book book)
     {
-
         this.bookService.updateBook(book);
         return "redirect:/books";
     }
@@ -68,7 +65,7 @@ public class BookController {
     {
         //model.addAttribute("book", this.bookService.getBookById(id));
         this.bookService.updateStatus(id);
-        model.addAttribute("listBooks", this.bookService.listBooks()); //выводим заново все книги
+        model.addAttribute("listBooks", this.bookService.listBooks(0)); //выводим заново все книги
 
         return "books";
     }

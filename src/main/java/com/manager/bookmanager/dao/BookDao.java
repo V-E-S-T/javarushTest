@@ -4,7 +4,7 @@ import com.manager.bookmanager.model.Book;
 
 import java.util.List;
 
-public interface BookDao {
+public interface BookDao{
     public void addBook(Book book);
 
     public void updateBook(Book book);
@@ -13,7 +13,9 @@ public interface BookDao {
 
     public Book getBookById(int id);
 
-    public List<Book> listBooks();
+    public List<Book> listBooks(int page);
 
     public void updateStatus(int id);
+
+    public Long totalPageCount();
 }

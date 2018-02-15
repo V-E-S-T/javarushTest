@@ -13,7 +13,9 @@ public interface BookService {
 
     public Book getBookById(int id);
 
-    public List<Book> listBooks();
+    public List<Book> listBooks(int page);
 
     public void updateStatus(int id);
+
+    public Long totalPageCount();
 }

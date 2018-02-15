@@ -25,13 +25,33 @@
                     <a href="../../index.jsp" class="btn btn-warning">Back to main menu</a>
                 </div>
             </div>
-
+            <!-- Кнопка, открывающее модальное окно -->
+            <div class="row-fluid">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal" style="margin-top: 30px">
+                        Add book
+                    </button>
+                </div>
+            </div>
 
             <div class="row-fluid">
                 <div class="col-md-12">
                     <br/>
                     <h1>Book List</h1>
                     <br/>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="col-md-12">
+                    <ul class="pagination">
+                        <li class="disabled"><span> << </span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"> >> </a></li>
+                    </ul>
                 </div>
             </div>
             <div class="row-fluid">
@@ -89,14 +109,7 @@
                 </div>
             </div>
 
-            <!-- Кнопка, открывающее модальное окно -->
-            <div class="row-fluid">
-                <div class="col-md-12">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gridSystemModal" style="margin-top: 30px">
-                        Add book
-                    </button>
-                </div>
-            </div>
+
 
             <!-- Модальное окно, основное содержимое которого организовано с использованием системы сеток Bootstrap 3 или 4 -->
             <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
