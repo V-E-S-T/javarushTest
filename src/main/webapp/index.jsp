@@ -18,7 +18,11 @@
      <div class="col-md-12">
        <h3>Test task "BookManager" JavaRush</h3>
        <br/>
-       <a href="<c:url value="/books"/>" class="btn btn-warning">Books list</a>
+       <a href="
+                    <c:url value="/books">
+                        <c:param name="page" value="1"/>
+                    </c:url>
+                " class="btn btn-warning">Books list</a>
        <br/>
      </div>
   </div>

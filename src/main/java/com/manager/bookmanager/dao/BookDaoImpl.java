@@ -83,8 +83,9 @@ public class BookDaoImpl implements BookDao{
         Session session = this.sessionFactory.getCurrentSession();
         Criteria criteriaCount = session.createCriteria(Book.class);
         criteriaCount.setProjection(Projections.rowCount());
+        Long totalPageCount = (Long)criteriaCount.uniqueResult();
 
-        return (Long)criteriaCount.uniqueResult();
+        return Double.valueOf(Math.ceil(totalPageCount/10)).longValue();
     }
 
     @Override

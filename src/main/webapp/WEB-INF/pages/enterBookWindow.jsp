@@ -28,7 +28,9 @@
 
         <div class="row-fluid">
             <div class="col-md-12">
-                <c:url var="addActionEdit" value="/books/edit" />
+                <c:url var="addActionEdit" value="/books/edit">
+                    <c:param name="page" value="${pageNumber}"/>
+                </c:url>
 
                 <form:form action="${addActionEdit}" commandName="book">
                     <table class="tg">

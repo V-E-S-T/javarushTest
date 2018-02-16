@@ -44,13 +44,17 @@
             <div class="row-fluid">
                 <div class="col-md-12">
                     <ul class="pagination">
-                        <li class="disabled"><span> << </span></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#"> >> </a></li>
+                        <c:forEach begin="1" end="${totalPageCount}" var="i">
+
+                            <li><a href="
+                                            <c:url value="/books">
+                                                     <c:param name="page" value="${i}"/>
+                                            </c:url>
+                                        ">${i}
+                            </a></li>
+
+                        </c:forEach>
+
                     </ul>
                 </div>
             </div>

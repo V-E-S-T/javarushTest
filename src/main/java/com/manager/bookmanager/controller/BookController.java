@@ -20,10 +20,11 @@ public class BookController {
     }
 
         @RequestMapping(value = "books", method = RequestMethod.GET)
-        public String listBooks(Model model, @RequestParam(defaultValue = "0") int page){
+        public String listBooks(Model model, @RequestParam("page") int page){
         model.addAttribute("book", new Book());
         model.addAttribute("listBooks", this.bookService.listBooks(page));
         model.addAttribute("totalPageCount", this.bookService.totalPageCount());
+        model.addAttribute("pageNumber", page);
 
         return "books";
     }
@@ -55,7 +56,6 @@ public class BookController {
         {
 
             model.addAttribute("book", this.bookService.getBookById(id));
-            //model.addAttribute("listBooks", this.bookService.listBooks()); //выводим заново все книги
 
             return "enterBookWindow";
         }
@@ -63,7 +63,6 @@ public class BookController {
     @RequestMapping(value = "editStatus/{id}")
     public String editStatus(@PathVariable("id") int id, Model model)    //страницы
     {
-        //model.addAttribute("book", this.bookService.getBookById(id));
         this.bookService.updateStatus(id);
         model.addAttribute("listBooks", this.bookService.listBooks(0)); //выводим заново все книги
 
