@@ -28,6 +28,7 @@
 
         <div class="row-fluid">
             <div class="col-md-12">
+
                 <c:url var="addActionEdit" value="/books/edit">
                     <c:param name="page" value="${pageNumber}"/>
                 </c:url>
@@ -101,12 +102,17 @@
                                 <div class="row-fluid" style="margin-top: 10px">
                                     <div class="col-md-6">
                                         <input type="submit"
-                                               value="<spring:message text="Edit Book"/>" class="btn btn-success"/>
+                                               value="<spring:message text="Edit Book"/>"
+                                               class="btn btn-success"/>
 
                                     </div>
 
                                     <div class="col-md-6">
-                                        <a href="<c:url value="/books"/>" class="btn btn-warning">Cancel</a>
+                                        <a href="
+                                                <c:url value="/books">
+                                                    <c:param name="page" value="${pageNumber}"/>
+                                                </c:url>
+                                                " class="btn btn-warning">Cancel</a>
                                     </div>
                                 </div>
 

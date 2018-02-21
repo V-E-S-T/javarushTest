@@ -87,8 +87,11 @@
                                         <div class="row-fluid">
                                             <div class="col-md-12">
 
-                                                <a href="<c:url value='/editBook/${book.id}'/>" class="btn btn-info btn-sm">Edit Book</a>
-
+                                                <a href="
+                                                         <c:url value='/editBook/${book.id}'>
+                                                                <c:param name="page" value="${pageNumber}"/>
+                                                         </c:url>
+                                                        " class="btn btn-info btn-sm">Edit Book</a>
                                             </div>
                                         </div>
                                     </td>
@@ -96,7 +99,11 @@
                                         <div class="row-fluid">
                                             <div class="col-md-12">
                                                 <c:if test="${book.readAlready == false}">
-                                                    <a href="<c:url value='/editStatus/${book.id}'/>" class="btn btn-info btn-sm">Mark as readed</a>
+                                                    <a href="
+                                                            <c:url value='/editStatus/${book.id}'>
+                                                                 <c:param name="page" value="${pageNumber}"/>
+                                                            </c:url>
+                                                            " class="btn btn-info btn-sm">Mark as readed</a>
                                                 </c:if>
 
                                                 <c:if test="${book.readAlready == true}">
@@ -105,7 +112,11 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td><a href="<c:url value='/remove/${book.id}'/>">Delete</a></td>
+                                    <td><a href="
+                                                <c:url value='/remove/${book.id}'>
+                                                      <c:param name="page" value="${pageNumber}"/>
+                                                </c:url>
+                                                ">Delete</a></td>
                                 </tr>
                             </c:forEach>
                         </table>
@@ -126,7 +137,9 @@
                         <div class="modal-body">
                             <!-- основное содержимое (тело) модального окна -->
 
-                            <c:url var="addAction" value="/books/add" />
+                            <c:url var="addAction" value="/books/add">
+                                <c:param name="page" value="${pageNumber}"/>
+                            </c:url>
                             <form:form action="${addAction}" commandName="book">
                                 <table>
 

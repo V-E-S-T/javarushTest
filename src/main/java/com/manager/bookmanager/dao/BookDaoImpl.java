@@ -84,8 +84,10 @@ public class BookDaoImpl implements BookDao{
         Criteria criteriaCount = session.createCriteria(Book.class);
         criteriaCount.setProjection(Projections.rowCount());
         Long totalPageCount = (Long)criteriaCount.uniqueResult();
-
-        return Double.valueOf(Math.ceil(totalPageCount/10)).longValue();
+        //Double.valueOf(Math.ceil(totalPageCount/10)).longValue();
+        Double doubl = new Double(totalPageCount);
+        doubl = Math.ceil(doubl/10);
+        return doubl.longValue();
     }
 
     @Override

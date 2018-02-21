@@ -1,6 +1,0 @@
-com\manager\bookmanager\model\Book.class
-com\manager\bookmanager\dao\BookDaoImpl.class
-com\manager\bookmanager\service\BookService.class
-com\manager\bookmanager\service\BookServiceImpl.class
-com\manager\bookmanager\controller\BookController.class
-com\manager\bookmanager\dao\BookDao.class
